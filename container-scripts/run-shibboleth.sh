@@ -6,6 +6,8 @@ export JETTY_HOME=/opt/jetty/
 export JETTY_BASE=/opt/iam-jetty-base/
 export PATH=$PATH:$JAVA_HOME/bin
 
+cp -r /opt/shibboleth-idp/overlay/conf/* /opt/shibboleth-idp/conf
+
 sed -i "s/^-Xmx.*$/-Xmx$JETTY_MAX_HEAP/g" /opt/iam-jetty-base/start.ini
 
 /etc/init.d/jetty run
