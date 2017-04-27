@@ -76,6 +76,7 @@ RUN useradd jetty -U -s /bin/false \
     && chown -R jetty:root /opt/shibboleth-idp/logs
 
 RUN chmod -R 777 /opt/iam-jetty-base
+RUN chmod -R 777 /opt/shibboleth-idp/conf
 
 ADD container-scripts/ /opt/container-scripts/
 
